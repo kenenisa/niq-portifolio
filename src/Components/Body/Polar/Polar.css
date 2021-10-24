@@ -1,0 +1,42 @@
+/* #gradient-canvas {
+  width:100%;
+  height:100%;
+  --gradient-color-1: #ef008f; 
+  --gradient-color-2: #6ec3f4; 
+  --gradient-color-3: #7038ff;  
+  --gradient-color-4: #ffba27;
+} */
+@keyframes fadeIn {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  /* #gradient-canvas {
+    width:100%;
+    height:100%;
+    opacity: 0;
+    animation: fadeIn 2s 3s forwards;
+    --gradient-color-1: #19191b; 
+    --gradient-color-2: #ef008f; R
+    --gradient-color-3: #19191b; 
+    --gradient-color-4: #5e24f1;  
+  } */
+  /* green */
+  #gradient-canvas {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    opacity: 0;
+    animation: fadeIn 2s 3s forwards;
+    --gradient-color-1: #19191b; 
+    --gradient-color-2: #4b0069a8;  
+    --gradient-color-3: #19191b; 
+    --gradient-color-4: #ef008f33; 
+    z-index: 1;
+  }
+  

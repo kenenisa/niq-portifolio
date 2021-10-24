@@ -1,0 +1,95 @@
+.post {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #aaa;
+  padding: 1rem 0;
+  margin-top: 1rem;
+  padding-bottom: 4rem;
+}
+.post .text-con {
+  position: relative;
+  left: 10%;
+  width: 80%;
+}
+.post .title {
+  font-size: 2rem;
+  font-weight: 300;
+  padding: 0.5rem 0;
+}
+.post .img-con {
+  position: relative;
+  width: 100%;
+  height: 30rem;
+  overflow: hidden;
+}
+.post .img-con img {
+  position: relative;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.post .reactions {
+  position: absolute;
+  bottom: -3rem;
+  right: 0.5rem;
+  display: flex;
+  width: 10rem;
+  height: 2.5rem;
+}
+.post .reactions .btn {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  padding-top: 0.5rem;
+  cursor: pointer;
+}
+.post .reactions .btn.like.liked {
+  color: rgb(255, 0, 76);
+  transition: color 200ms 700ms ease-out;
+}
+@keyframes blow {
+  from {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+}
+.post .reactions .btn.like .for-anime {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgb(255, 0, 76);
+  z-index: 1;
+  animation: blow 1.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.post .reactions .btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.post .reactions .btn.like:hover {
+    background: rgba(0, 0, 0, 0);
+  }
+.post .reactions .btn i {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .post .text-con {
+    left: 2.5%;
+    width: 95%;
+  }
+  .post .img-con {
+    height: auto;
+  }
+  .post .img-con img {
+    width: 100%;
+    height: auto;
+  }
+}

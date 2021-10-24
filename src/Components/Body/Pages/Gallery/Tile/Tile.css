@@ -1,0 +1,57 @@
+@keyframes in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    left:0;
+  }
+}
+.tile {
+  position: relative;
+  width: 19%;
+  height: 15rem;
+  border: 1px solid rgba(187, 187, 187, 0);
+  display: inline-block;
+  margin-left: 0.65%;
+  margin-bottom: 0.2rem;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+
+  animation: in 300ms ease-in forwards;
+  /* border-radius: 5px; */
+}
+.tile img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 900px) {
+  .tile {
+    width: 24%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .tile {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tile {
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tile {
+    height: 10rem;
+  }
+}

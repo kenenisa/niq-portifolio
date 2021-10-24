@@ -1,0 +1,122 @@
+body {
+  color: white;
+  background: rgb(24, 25, 26);
+}
+/* * {
+  z-index: 3;
+} */
+.body-con{
+  z-index:0;
+}
+.body-con .hero-con {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+.body-con .center {
+  position: relative;
+  top: 18rem;
+  left: 10%;
+  width: 80%;
+  color: black;
+  /* background:rgba(255, 255, 255, 0); */
+}
+.body-con .rest-con {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding-bottom: 15rem;
+  color: black;
+  margin-bottom: 5rem;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 3;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.319);
+  margin-bottom:50rem;
+}
+.body-con .rest-con .profile {
+  position: relative;
+  top: 1rem;
+  left: 5%;
+  width: 20rem;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  padding: 1rem 0.5rem;
+}
+.body-con .rest-con .profile .img {
+  position: relative;
+  top: 0;
+  margin: auto;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.body-con .rest-con .profile .img img {
+  width: 100%;
+  height: 100%;
+}
+
+.body-con .rest-con .profile .name {
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+  /* font-weight: bold; */
+  margin-bottom:1px solid #ddd;
+}
+.body-con .rest-con .profile .name span {
+  font-weight: lighter;
+  color: rgb(78, 78, 78);
+}
+.body-con .rest-con .profile .info {
+  position:relative;
+  margin-top:0.5rem;
+}
+.body-con .rest-con .profile .list {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  height: 2rem;
+  font-size:1.2rem;
+  color:rgb(63, 63, 63);
+}
+.body-con .rest-con .profile .list .left {
+  position: absolute;
+  left: 0;
+  width: 49%;
+  text-align:right;
+  font-size:1rem;
+  color:rgb(82, 82, 82);
+}
+.body-con .rest-con .profile .list .right {
+  position: relative;
+  left:51%;
+  width:49%;
+  font-weight:400
+}
+
+.body-con .page {
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  padding-bottom: 15rem;
+  color: black;
+  margin-bottom: 5rem;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 3;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.319);
+}
+.body-con .page .head{
+  font-size:1.75rem;
+  margin:2rem;
+  font-weight: 300;
+  display: block;
+}

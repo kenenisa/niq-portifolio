@@ -1,0 +1,81 @@
+.hero .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: rgba(24, 25, 26, 0);
+  overflow-x: hidden;
+}
+.hero .content .title {
+  position: absolute;
+  top: 30%;
+  left: 5rem;
+  /* transform: translate(-50%,-50%); */
+}
+.hero .content .title {
+  cursor: normal;
+}
+.hero .content .title span.name {
+  font-size: 3.5rem;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(94, 94, 94, 0.562);
+  display: block;
+}
+
+
+@keyframes identifier {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.hero .content .title span.prof {
+  position: relative;
+  top:-1rem;
+  font-weight: lighter;
+  opacity: 0;
+  animation: 1s 2.5s identifier forwards;
+
+}
+.hero .content .title span::selection {
+  background-color: rgba(0, 0, 0, 0);
+}
+.cls-1 {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: dash 2s linear forwards;
+  stroke: white;
+  fill: white;
+  filter:invert(100%)
+}
+.d0 {animation-delay:100ms}
+.d1 {animation-delay:200ms}
+.d2 {animation-delay:300ms}
+.d3 {animation-delay:400ms}
+.d4 {animation-delay:500ms}
+.d5 {animation-delay:600ms}
+.d6 {animation-delay:700ms}
+.d7 {animation-delay:800ms}
+.d8 {animation-delay:900ms}
+.d9 {animation-delay:1000ms}
+.d10{animation-delay:1100ms}
+.d11{animation-delay:1200ms}
+.d12{animation-delay:1300ms}
+.d13{animation-delay:1400ms}
+.d14{animation-delay:1500ms}
+.d15{animation-delay:1600ms}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:4px;}
+
+.the-svg{
+  transform: scale(3.25) translateX(70px);
+}
+.the-svg2{
+  transform: scale(2.25) translateX(-55px) translateY(-10px);
+}

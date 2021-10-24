@@ -1,0 +1,8 @@
+.gallery{
+    font-weight: 300;
+
+}
+.gallery .tiles{
+    position: relative;
+    min-height: 100%;
+}
