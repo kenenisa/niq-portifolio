@@ -1,8 +1,69 @@
-.gallery{
-    font-weight: 300;
-
+.gallery {
+  font-weight: 300;
 }
-.gallery .tiles{
+.gallery .tiles {
+  position: relative;
+  min-height: 100%;
+}
+.gallery .tag-search {
+  /* background:red; */
+  position: relative;
+  width: 60%;
+  left: 20%;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+.gallery .tag-search input {
+  position: relative;
+  left: -1rem;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  /* box-sizing: border-box; */
+  padding: 0.5rem 1rem;
+  /* opacity: 0; */
+}
+.gallery .tag-search .tag-list{
+    position: absolute;
+    top:-1.75rem;
+    left:-1rem;
+    width:100%;
+    background: rgba(255, 255, 255, 0.452);
+    padding:0.1rem 1rem;
+    padding-bottom: 1rem;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    overflow: hidden;
+    height:2rem;
+}
+.gallery .tag-search .tag-list .list-item{
     position: relative;
-    min-height: 100%;
+    top:-0.32rem;
+    padding: 0.25rem 0.5rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color:gray;
+    line-height: 2rem;
+}
+.gallery .tag-search .tag-list .list-item span{
+    font-size: 1rem;
+    color:black;
+}
+.gallery .tag-search .tag-list .list-item:hover{
+    background: rgba(0, 0, 0, 0.101);
+}
+.gallery .empty-list{
+    position: relative;
+    margin:auto;
+    width:12rem;
+    font-size:1.1rem;
+    font-weight: 300;
+    color:gray;
+}
+@media screen and (max-width: 500px) {
+  .gallery .tag-search {
+    width: 90%;
+    left: 5%;
+  }
 }

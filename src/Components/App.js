@@ -15,9 +15,6 @@ function App() {
       setPage(page);
     }
   });
-  useEffect(() => {
-    console.log(page);
-  }, [page]);
   return (
     // <Icon>add_circle</Icon>
     <div className="app">

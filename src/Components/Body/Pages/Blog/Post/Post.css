@@ -52,6 +52,24 @@
   color: rgb(255, 0, 76);
   transition: color 200ms 700ms ease-out;
 }
+.post .reactions .btn.share .alert {
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+  background: rgb(20, 28, 49);
+  color: white;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.9rem;
+  width: 20rem;
+  text-shadow: unset;
+  opacity: 0;
+  transition: opacity 300ms;
+  transform: scale(0);
+}
+.post .reactions .btn.share .alert.show {
+  transform: scale(1);
+  opacity: 1;
+}
 @keyframes blow {
   from {
     transform: translate(-50%, -50%) scale(10);
@@ -71,16 +89,23 @@
   z-index: 1;
   animation: blow 1.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.post .reactions .btn:hover {
-  background: rgba(0, 0, 0, 0.1);
+.post .reactions .btn.like .count {
+  position: absolute;
+  bottom: -0.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.85rem;
 }
-.post .reactions .btn.like:hover {
-    background: rgba(0, 0, 0, 0);
-  }
 .post .reactions .btn i {
   font-size: 1.5rem;
 }
+.post .reactions .btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
 @media screen and (max-width: 768px) {
+  .post .reactions .btn:hover {
+    background: rgba(119, 86, 86, 0);
+  }
   .post .text-con {
     left: 2.5%;
     width: 95%;
@@ -92,4 +117,25 @@
     width: 100%;
     height: auto;
   }
+}
+.post .tags{
+  position: relative;
+  left:0;
+  width:100%;
+  padding:1rem;
+  margin-bottom:5rem;
+  box-sizing: border-box;
+}
+.post .tags a{
+  text-decoration: none;
+}
+.post .tags .tag{
+  margin-left:0.5rem;
+  padding:0.2rem 0.5rem;
+  font-size:1.1rem;
+  line-height: 2rem;
+  background:white;
+  color:rgb(0, 97, 189);
+  border-radius:5px;
+  cursor: pointer;
 }
