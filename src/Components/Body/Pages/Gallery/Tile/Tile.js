@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './Tile.css';
 //
-function Tile({ img, i,openModal }) {
-
+function Tile({ img, i,ii,openModal }) {
+    const imgRef = useRef(null); 
     return (
-        <div className="tile" style={{ animationDelay: (i * 0.2) + 's' }} onClick={()=>openModal(i)}>
-            <img src={img} alt="gallery item" />
+        <div className={`tile ${imgRef.current && ((imgRef.current.naturalHeight - imgRef.current.naturalWidth) > 50 && 'vertical')}`} style={{ animationDelay: (ii * 0.2) + 's' }} onClick={()=>openModal(i)} >
+            <img src={img} alt="gallery item" ref={imgRef}/>
         </div>
     )
 }

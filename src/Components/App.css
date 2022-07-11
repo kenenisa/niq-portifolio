@@ -13,3 +13,33 @@ body{
 .under{
     z-index:0;
 }
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.alert{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:rgba(0, 0, 0, 0.684);
+    border-radius:5px;
+    color:white;
+    font-size:1.1rem;
+    padding:0.5rem 1rem;
+    opacity: 0;
+    min-width:15rem;
+    animation: fade 5s forwards ease-out;
+    text-align: center;
+    z-index:20;
+}

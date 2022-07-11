@@ -1,3 +1,4 @@
+/*eslint-disable*/
 /*eslint-disable no-unused-expressions*/
 import React, { useEffect, useRef } from 'react'
 import './Polar.css';

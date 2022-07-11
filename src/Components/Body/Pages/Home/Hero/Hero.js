@@ -1,20 +1,15 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import './Hero.css';
-import './effect.js';
+// import './effect.js';
 import introSound from './../../../../../Assets/audio/intro.mp3';
 
 ////
 function Hero() {
-    const audio = useRef(null)
-    useEffect(() => {
-        if (audio.current) {
-            audio.current.play();
-        }
-    }, []);
+    // 
     return (
         <div className="hero">
             <div className="content">
-                <audio ref={audio} autoPlay style={{marginTop:100}}>
+                <audio autoPlay style={{marginTop:100}}>
                     <source src={introSound} type="audio/mpeg" />
                 </audio>
                 <div className="title">

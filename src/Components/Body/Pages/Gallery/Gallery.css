@@ -1,4 +1,7 @@
 .gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
   font-weight: 300;
 }
 .gallery .tiles {

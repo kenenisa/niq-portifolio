@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Gallery.css'
-import Data from './../../../../Assets/data.json';
 import Tiles from './Tiles';
 //
 function Gallery({ openModal }) {
-    const data = Data.gallery;
+    const data = window.data.gallery;
     const [searchTag, setSearchTag] = useState('');
     const [showTagList, setShowTagList] = useState(false);
     const [renderData, setRenderData] = useState(data);
     const [tagList, setTagList] = useState([]);
+    const [taggedNow, setTaggedNow] = useState(false);
     const [renderTagList, setRenderTagList] = useState(tagList);
     const tagInput = useRef(null);
 
@@ -17,39 +17,40 @@ function Gallery({ openModal }) {
     }, [tagList])
     useEffect(() => {
         let list = [];
+        const dir = window.location;
+        const show = dir.search.includes('tag=');
         data.forEach(item => {
-            item.tag.split(',').forEach(i => {
-                const x = i.trim().toLowerCase();
-                if (x) {
-                    const found = list.find(y => y.name === x);
-                    if (found) {
-                        list = list.filter(y => y.name !== x);
-                        list.push({ name: x, count: found.count + 1 });
-                    } else {
-                        list.push({ name: x, count: 1 });
+            if (!item.hide || show) {
+                item.tag.split(',').forEach(i => {
+                    const x = i.trim().toLowerCase();
+                    if (x) {
+                        const found = list.find(y => y.name === x);
+                        if (found) {
+                            list = list.filter(y => y.name !== x);
+                            list.push({ name: x, count: found.count + 1 });
+                        } else {
+                            list.push({ name: x, count: 1 });
+                        }
                     }
-                }
-            })
+                })
+            }
         })
         list.sort((x, y) => y.count - x.count)
         setTagList(list.map(item => {
             item.name = item.name.slice(0, 1).toUpperCase() + item.name.slice(1)
             return item;
-        }));
+        }).filter(i => i.name !== ''));
 
-    }, []);
+    }, [data]);
     useEffect(() => {
         const dir = window.location;
         if (dir.search.includes('tag=')) {
-            console.log('found');
-            const t = dir.search.split('tag=')[1].split('&')[0].replace(/(%20)/g,' ');
+            const t = dir.search.split('tag=')[1].split('&')[0].replace(/(%20)/g, ' ');
             setShowTagList(true);
-            setSearchTag(t)
+            setSearchTag(decodeURIComponent(t));
+            setTaggedNow(true)
         }
-    },[])
-    useEffect(() => {
-        console.log(renderData);
-    }, [renderData]);
+    }, [])
     useEffect(() => {
         if (searchTag === '') {
             setRenderData(data);
@@ -64,14 +65,14 @@ function Gallery({ openModal }) {
                 return item.name.toLowerCase().includes(searchTag.toLowerCase())
             }))
         }
-    }, [searchTag])
+    }, [searchTag, data, tagList])
     useEffect(() => {
         if (tagInput.current) {
             tagInput.current.onfocus = (e) => {
                 setShowTagList(true);
             }
             // tagInput.current.onblur = (e) => {
-            //     setShowTagList(false);
+            // setShowTagList(false);
             // }
         }
     }, [tagInput])
@@ -91,6 +92,10 @@ function Gallery({ openModal }) {
     const handleInput = (e) => {
         setSearchTag(e.target.value)
     }
+    const handleInputClick = () => {
+        setSearchTag('');
+        setTaggedNow(false);
+    }
     return (
         <div className="gallery page">
             <span className="head">Gallery</span>
@@ -105,11 +110,12 @@ function Gallery({ openModal }) {
                     type="text"
                     value={searchTag}
                     onChange={handleInput}
+                    onClick={handleInputClick}
                     placeholder="Search by Tags"
                 />
             </div>
             <div className="tiles">
-                <Tiles openModal={openModal} data={renderData} />
+                <Tiles openModal={openModal} data={renderData} taggedNow={taggedNow} />
             </div>
         </div>
     )

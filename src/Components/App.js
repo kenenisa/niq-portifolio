@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
-// import logo from './../logo.svg';
 import './App.css';
 import Body from './Body/Body';
 import Header from './Header/Header';
-// import { Button, Icon, Table } from '@material-ui/core';
-// import { AccessAlarm } from '@material-ui/icons';
-
+import request from './../Util/request';
 function App() {
   const [page, setPage] = useState('home');
   useEffect(() => {
@@ -14,7 +11,12 @@ function App() {
       const page = dir.search.split('page=')[1].split('&')[0]
       setPage(page);
     }
-  });
+    if (!localStorage.visit) {
+      request('visit').then((e) => {
+        localStorage.visit = true
+      })
+    }
+  }, []);
   return (
     // <Icon>add_circle</Icon>
     <div className="app">

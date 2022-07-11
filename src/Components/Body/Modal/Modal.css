@@ -1,17 +1,18 @@
 .modal {
   position: absolute;
-  top: 0;
+  top: 2rem;
   right: 0;
   bottom: 0;
   left: 0;
   width: 100%;
   color: white;
   z-index: 3;
+  overflow-x: hidden;
 }
 .modal .post {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
   border: unset;
   padding:0;
 }

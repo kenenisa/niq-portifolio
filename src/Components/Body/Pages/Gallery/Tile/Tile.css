@@ -6,7 +6,7 @@
   to {
     opacity: 1;
     transform: scale(1);
-    left:0;
+    left: 0;
   }
 }
 .tile {
@@ -19,21 +19,52 @@
   margin-bottom: 0.2rem;
   /* background-size: contain; */
   background-repeat: no-repeat;
-  overflow-x: hidden;
+  overflow: hidden;
   opacity: 0;
   transform: scale(0.8);
-
   animation: in 300ms ease-in forwards;
   /* border-radius: 5px; */
 }
 .tile img {
   height: 100%;
+  min-width: 100%;
   width: auto;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
+.tile.vertical img {
+  width: 100%;
+  min-height: 100%;
+  min-width: unset;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+@media screen and (min-width: 1250px) {
+  .tile {
+    width: 15.75%;
+  }
+}
+@media screen and (min-width: 1555px) {
+  .tile {
+    width: 13.4%;
+  }
+}
+@media screen and (min-width: 1815px) {
+  .tile {
+    width: 11.5%;
+  }
+}
+@media screen and (min-width: 2150px) {
+  .tile {
+    width: 10.25%;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .tile {
     width: 24%;

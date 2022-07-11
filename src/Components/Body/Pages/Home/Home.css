@@ -1,0 +1,390 @@
+.home {
+  position: relative;
+}
+.home .top {
+  position: relative;
+  top: -6rem;
+  padding-top: 6rem;
+  width: 100%;
+  height: 10rem;
+  overflow: hidden;
+}
+.home .top .img {
+  position: absolute;
+  top: 6rem;
+  left: 5%;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgba(255, 255, 255, 0.85);
+  transition: all 300ms;
+  z-index: 1;
+}
+.home .top .img.visible {
+  top: 0rem;
+}
+.home .top .img img {
+  width: 100%;
+  height: 100%;
+}
+.home .top .reviewed {
+  position: absolute;
+  top: 13rem;
+  left: 7.75rem;
+  height: 3rem;
+  text-align: center;
+  color: gray;
+  z-index:0;
+}
+.home .text {
+  position: absolute;
+  top: 6.5rem;
+  left: calc(5% + 14rem);
+}
+.home .text .name {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.home .text .prof {
+  font-size: 0.9rem;
+  color: rgb(59, 59, 59);
+}
+.home .text .address {
+  position: relative;
+  top: 0.75rem;
+}
+.home .text .social-contacts {
+  position: relative;
+  top: 0.5rem;
+}
+.home .text .social-contacts a{
+  color: black;
+  text-decoration: none;
+}
+.home .text .social-contacts span {
+  position: relative;
+  padding: 0.1rem 0.5rem;
+  background: rgb(216, 216, 216);
+  margin-right: 0.75rem;
+  box-shadow: 1px 1px 10px 1px rgba(221, 221, 221, 0.623);
+  cursor: pointer;
+  border-radius: 3px;
+  line-height: 2rem;
+  word-break: keep-all;
+  white-space: pre;
+}
+.home .text .social-contacts br {
+  display: none;
+}
+.home .counts {
+  position: relative;
+  top: -5rem;
+  width: calc(95% - 14rem);
+  left: calc(5% + 14rem);
+  box-sizing: border-box;
+  /* padding:0 1rem; */
+}
+.home .latest {
+  position: relative;
+  top: -2rem;
+  width: calc(95% - 14rem);
+  left: calc(5% + 14rem);
+  overflow-x: hidden;
+}
+.home .latest.down {
+  top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+}
+.home .latest .head-item {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+}
+.home .latest iframe {
+  width: 99%;
+  height: 480px;
+  max-width: 55rem;
+}
+
+.home .counts .item {
+  position: relative;
+  display: inline-block;
+  margin-right: 4rem;
+  text-align: center;
+}
+.home .counts .item.last {
+  margin-right: 0;
+}
+.home .counts .item div {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.home .counts .item span {
+  text-align: center;
+}
+@keyframes rot {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-45deg);
+  }
+}
+.home .latest .skill {
+  display: inline-block;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 7rem;
+  height: 7rem;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  /* background: yellow; */
+}
+.home .latest .skill img {
+  width: 100%;
+  height: 100%;
+}
+/* .home .latest .skill .graph{
+    position: relative;
+    top:0;
+    left:0.875rem;
+    width:2.75rem;
+    height:2.75rem;
+    border:1.25rem solid rgb(201, 201, 201);
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+.home .latest.animate .skill .graph{
+    animation: rot 4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards infinite alternate;
+}
+.home .latest .skill.p25 .graph{
+    border-right:1.25rem solid rgb(255, 94, 0);
+}
+.home .latest .skill.p50 .graph{
+    border-right:1.25rem solid rgb(255, 208, 0);
+    border-bottom:1.25rem solid rgb(255, 208, 0);
+}
+.home .latest .skill.p75 .graph{
+    border-right:1.25rem solid rgb(7, 170, 80);
+    border-bottom:1.25rem solid rgb(7, 170, 80);
+    border-left:1.25rem solid rgb(7, 170, 80);
+}
+.home .latest .skill.p100 .graph{
+    border:1.25rem solid rgb(2, 151, 59);
+} */
+.home .latest.skills .skill {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+}
+.home .latest.skills .skill span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8rem;
+  text-align: right;
+  box-sizing: border-box;
+  padding-right: 0.5rem;
+}
+.home .latest.skills .skill .graph {
+  position: absolute;
+  top: 0.7rem;
+  left: 9rem;
+  right: 0;
+  background: rgba(0, 0, 0, 0.185);
+  height: 0.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 20rem;
+  /* background: rgb(190,220,165); */
+}
+.home .latest.skills .skill .graph .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 90%;
+}
+.home .latest {
+  height: unset;
+  overflow-y: visible;
+  overflow-x: hidden;
+  max-width: 80rem;
+
+}
+.home .latest .review-item {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height:5rem; */
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: 1rem;
+  overflow: hidden;
+}
+.home .latest .review-item .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  background: green;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.home .latest .review-item .img img {
+  width: 100%;
+  height: 100%;
+}
+.home .latest .review-item .text {
+  position: relative;
+  top: 0;
+  left: 3.5rem;
+  width: calc(100% - 4rem);
+  max-width:70rem;
+}
+.home .latest .review-item .text .name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.home .latest .review-item .text .name span {
+  font-size: 1rem;
+  color: gray;
+  font-weight: normal;
+}
+.home .latest .review-item .review-text {
+  margin-bottom: 1rem;
+}
+.home .latest .review-item .review-stars span {
+  color: gray;
+  font-size: 0.8rem;
+}
+.home .latest .review-item .review-stars div {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+.home .latest .review-item .review-stars i {
+  font-size: 0.9rem;
+}
+/* div{
+  border: 1px solid red;
+} */
+.home .credit{
+  position: absolute;
+  bottom: 0;
+  background:#ddd;
+  width:100%;
+  padding:0.5rem 0;
+  text-align: center;
+}
+.home .credit a{
+  color:rgb(0, 162, 255);
+}
+.home .visits{
+  text-align: center;
+}
+.home .visits div{
+  font-size:2.5rem;
+  font-weight: bold;
+}
+.home .visits span{
+  font-weight: 400;
+}
+@media screen and (max-width: 1000px) {
+  .home .latest iframe {
+    height: 360px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .home .top {
+    height: 18rem;
+  }
+  .home .top .img,
+  .home .top .text {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .home .top .reviewed {
+    top: 13rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2rem;
+  }
+  .home .top .text {
+    top: 15rem;
+    /* left:5%; */
+    text-align: center;
+    min-width: 30rem;
+  }
+  .home .counts {
+    position: relative;
+    top: -5rem;
+    left: unset;
+    width: 18rem;
+    margin: auto;
+    transform: translateX(5%);
+  }
+  .home .latest {
+    width: 100%;
+    left: 0;
+  }
+  .home .latest .head-item {
+    position: relative;
+    left: 10%;
+  }
+  .home .latest iframe {
+    position: relative;
+    margin: auto;
+    width: 99%;
+    max-width: 30rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 350px;
+  }
+  .home .latest.down {
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+  }
+  .home .latest .skill {
+    margin-right: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home .latest .head-item {
+    left: 0.5rem;
+  }
+}
+@media screen and (max-width: 490px) {
+  .home .text .social-contacts span {
+    margin-right: 0.25rem;
+    padding: 0.1rem 0.2rem;
+  }
+  .home .top .text {
+    min-width: 26rem;
+  }
+}
+@media screen and (max-width: 415px) {
+  .home .text .social-contacts span {
+    /* padding:0.1rem 2.75rem; */
+    min-width: 1rem;
+  }
+  .home .text .social-contacts br {
+    display: block;
+  }
+  .home .latest iframe {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .home .latest iframe {
+    height: 260px;
+  }
+}

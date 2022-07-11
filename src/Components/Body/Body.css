@@ -39,67 +39,6 @@ body {
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.319);
   margin-bottom:50rem;
 }
-.body-con .rest-con .profile {
-  position: relative;
-  top: 1rem;
-  left: 5%;
-  width: 20rem;
-  border: 2px solid #aaa;
-  border-radius: 5px;
-  padding: 1rem 0.5rem;
-}
-.body-con .rest-con .profile .img {
-  position: relative;
-  top: 0;
-  margin: auto;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 1rem;
-}
-.body-con .rest-con .profile .img img {
-  width: 100%;
-  height: 100%;
-}
-
-.body-con .rest-con .profile .name {
-  position: relative;
-  font-size: 1.2rem;
-  text-align: center;
-  /* font-weight: bold; */
-  margin-bottom:1px solid #ddd;
-}
-.body-con .rest-con .profile .name span {
-  font-weight: lighter;
-  color: rgb(78, 78, 78);
-}
-.body-con .rest-con .profile .info {
-  position:relative;
-  margin-top:0.5rem;
-}
-.body-con .rest-con .profile .list {
-  position: relative;
-  left: 5%;
-  width: 90%;
-  height: 2rem;
-  font-size:1.2rem;
-  color:rgb(63, 63, 63);
-}
-.body-con .rest-con .profile .list .left {
-  position: absolute;
-  left: 0;
-  width: 49%;
-  text-align:right;
-  font-size:1rem;
-  color:rgb(82, 82, 82);
-}
-.body-con .rest-con .profile .list .right {
-  position: relative;
-  left:51%;
-  width:49%;
-  font-weight:400
-}
 
 .body-con .page {
   position: absolute;
@@ -110,7 +49,7 @@ body {
   padding-bottom: 15rem;
   color: black;
   margin-bottom: 5rem;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(250, 250, 250, 0.85);
   z-index: 3;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.319);
 }
@@ -119,4 +58,15 @@ body {
   margin:2rem;
   font-weight: 300;
   display: block;
+}
+.body-con .telet{
+  position: fixed;
+  top:0;
+  right:0;
+  height:100%;
+  z-index:1;
+  opacity: 0.4;
+}
+.body-con .telet img{
+  height: 150%;
 }
