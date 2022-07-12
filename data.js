@@ -1,11 +1,25 @@
 var data = {
     gallery: [
+
+        {
+            id: 35,
+            title: "HABESHAN LOGIC 3",
+            body: "The third part for HL bring out a nice and diffrent look than the other parts and it conntribute to the traditional way of creating our spices.",
+            tag: "ethiopia, fantasy, photoshop, Habeshan, logic, traditional, spices, design "
+        },
+
+        {
+            id: 34,
+            title: "SKY WALKER 3",
+            body: "this is the third part for the sky walker segment As You Saw In The Previous Parts We Like To Change the Scene In Every Part.",
+            tag: "ethiopia, fantasy, photoshop, inspired, earth, Moon, warm, dreamer, space , Stars  "
+        },
         
         {
             id: 33,
             title: "THE Dreamer",
             body: "this is a design for all those people out thier struggling on that creative voage ..... KEEP UP.",
-            tag: "ethiopia, fantasy, photoshop, inspired, highlights, wonder, warm, dreamer, night,  "
+            tag: "ethiopia, fantasy, photoshop, inspired, highlights, wonder, warm, dreamer, night  "
         },
         {
             id: 32,
@@ -23,19 +37,19 @@ var data = {
             id: 30,
             title: "Thin Wall and Tall Cellings",
             body: "this is a music inspired design with the same title and just made it from scratch ",
-            tag: "ethiopia, fantasy, photoshop, inspired, musicinspired, wonder, pexles, scratch"
+            tag: "ethiopia, fantasy, photoshop, inspired, musicinspired, wonder, pexles, scratch "
         },
         {
             id: 29,
             title: "SKY WALKER 2",
             body: "sky walker is back with another one got a little spin on it from the first part the enviroment is changed ",
-            tag: "ethiopia, illustration, photoshop, fantasy, creativebubble, wonder, shiloutte, part2"
+            tag: "ethiopia, illustration, photoshop, fantasy, creativebubble, wonder, shiloutte, part2 "
         },
         {
             id: 28,
             title: "SKY WALKER",
             body: "sky walker is a brand for a t shirt its done on as shiloutte illustration its about being in that creative bubble being lost in the process ",
-            tag: "ethiopia, illustration, photoshop, fantasy, creativebubble, wonder, shiloutte, part1"
+            tag: "ethiopia, illustration, photoshop, fantasy, creativebubble, wonder, shiloutte, part1 "
         },
         {
             id: 27,
@@ -199,23 +213,24 @@ var data = {
             body: " here is some try out that turned out to be a fine art .......i think.",
             tag: "illustration, admas, sunset, sun, conceptual"
         },
+           
     ],
     blog: [
         {
             id: 1,
-            title: "milestone",
-            body: "hello everyone estif(NIQ) here and first of all i wanna start up by sayin how is the website? and second wow i never <br> thought i would go this far i mean i love graphics designing but it happned so fast one day i was opening photoshop but now i have a channel<br> and a website wow .. and the thing i wanna say is that continuing to do things is great what ever you're field is and lastly i wanna give thanks<br> for all the people who helped me to be in this place ad all the fans who enjoyed my work........ and ENJOY the launch of my website.",
-            // tag: "Milestone, thanks, NIQ"
+            title: "Milestone",
+            body: "Hello Everyone Estif(NIQ) Here And First Of All I Wanna Start Up By Sayin How Is The Website? And Second Wow I Never Thought I Would Go This Far I Mean I love Graphics Designing But It Happned So Fast One Day i Was Opening Photoshop For The First Time But Now I Have A Channel And A Website Wow And The Thing I Wanna Say Is That Continuing To Do Things Is Great What Ever You're Field Is And Lastly I Wanna Give Thanks For All The People Who Helped Me To Be In This Place And All The Fans Who Enjoyed My Work And ENJOY The Launch Of My Website.",
+            tag: "Milestone, thanks, NIQ, thought"
         },
        
     ],
     projects: [
         {
             id: 1,
-            title: "Property of the wild",
+            title: "SKY WALKER",
             belongs: "personal",
-            body: "Ipsum cillum amet commodo veniam reprehenderit aliqua nostrud eu culpa.Proident voluptate laborum exercitation veniam irure mollit ea ad.",
-            start: "20 oct 2020",
+            body: "SKY WALKER Is An Orignal Brand Of Ours Soon To Be.",
+            start: "20 oct 2019",
             end: "ongoing"
         },
       
@@ -228,13 +243,13 @@ var data = {
         },
         {
             id: 2,
-            name: 'Graphics',
-            amount: 80
+            name: 'Typography',
+            amount: 90
         },
         {
             id: 3,
             name: 'Illustration',
-            amount: 80
+            amount: 90
         },
         {
             id: 4,
@@ -244,19 +259,17 @@ var data = {
         {
             id: 5,
             name: 'cinimatography',
-            amount: 60
+            amount: 70
         },
         
     ],
     reviews: [
         {
             id: 1,
-            name: 'KALHAB',
-            type: 'Flayer',
-            text: 'we had such a good time developing the flayer one thing i loved is that the live update you made infront of me that was cool.',
-            rate: 4
+            name: 'We Decor',
+            type: 'Flayer Template & Poster',
+            text: 'We Gave UNIQ Design To Design Our Flayer Template, And By Their Outstanding Result And Incredible Speed, We Decided To Work More With Them And Gave A Project To Design Out Our Main Poster For Our Upcoming Event, Once Again The Poster Was Designed With An Amazing And Very Creative Way And For That We Would Like To Appreciate Thier Dedication And Respect For Clients. And We Hope To Work More With Them In The Future <br> We Decor <br>.',
+            rate: 4.7
         },
-    ],
-
-    bio:""
+    ]
 }
