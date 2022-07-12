@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/niq-portifolio/static/css/main.67ec707f.chunk.css",
+    "main.js": "/niq-portifolio/static/js/main.2fe33898.chunk.js",
+    "main.js.map": "/niq-portifolio/static/js/main.2fe33898.chunk.js.map",
+    "runtime-main.js": "/niq-portifolio/static/js/runtime-main.5123e635.js",
+    "runtime-main.js.map": "/niq-portifolio/static/js/runtime-main.5123e635.js.map",
+    "static/js/2.e59ca4db.chunk.js": "/niq-portifolio/static/js/2.e59ca4db.chunk.js",
+    "static/js/2.e59ca4db.chunk.js.map": "/niq-portifolio/static/js/2.e59ca4db.chunk.js.map",
+    "static/js/3.2ae8a659.chunk.js": "/niq-portifolio/static/js/3.2ae8a659.chunk.js",
+    "static/js/3.2ae8a659.chunk.js.map": "/niq-portifolio/static/js/3.2ae8a659.chunk.js.map",
+    "index.html": "/niq-portifolio/index.html",
+    "static/css/main.67ec707f.chunk.css.map": "/niq-portifolio/static/css/main.67ec707f.chunk.css.map",
+    "static/js/2.e59ca4db.chunk.js.LICENSE.txt": "/niq-portifolio/static/js/2.e59ca4db.chunk.js.LICENSE.txt",
+    "static/media/intro.e6cad8d1.mp3": "/niq-portifolio/static/media/intro.e6cad8d1.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5123e635.js",
+    "static/js/2.e59ca4db.chunk.js",
+    "static/css/main.67ec707f.chunk.css",
+    "static/js/main.2fe33898.chunk.js"
+  ]
+}
