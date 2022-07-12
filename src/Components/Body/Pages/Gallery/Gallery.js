@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import StringToColor from '../../../../Util/colorHash';
 import './Gallery.css'
 import Tiles from './Tiles';
 //
@@ -10,6 +11,7 @@ function Gallery({ openModal }) {
     const [tagList, setTagList] = useState([]);
     const [taggedNow, setTaggedNow] = useState(false);
     const [renderTagList, setRenderTagList] = useState(tagList);
+    const [openTagsModal, setOpenTagsModal] = useState(false);
     const tagInput = useRef(null);
 
     useEffect(() => {
@@ -89,6 +91,44 @@ function Gallery({ openModal }) {
             </React.Fragment>
         )
     }
+    const handleTagSelect = (name) => {
+        setSearchTag(name)
+        setOpenTagsModal(false)
+    }
+    const Tags = () => {
+        return (
+            <React.Fragment>
+                <div
+                    className="tags-item"
+                    onClick={() => handleTagSelect("")}
+                    style={{
+                        animationDelay: 300 + 'ms'
+                    }}
+                >
+                    All
+                    <span>{data.length}</span>
+                </div>
+                {
+
+                    tagList.map((item, key) => (
+                        <div
+                            key={key}
+                            className="tags-item"
+                            onClick={() => handleTagSelect(item.name)}
+                            style={{
+                                background: StringToColor(item.name),
+                                animationDelay: ((25 * (key + 2)) + 275) + 'ms'
+                            }}
+                        >
+                            {item.name}
+                            <span>{item.count}</span>
+                        </div>
+                    ))
+                }
+            </React.Fragment>
+        )
+    }
+
     const handleInput = (e) => {
         setSearchTag(e.target.value)
     }
@@ -99,6 +139,7 @@ function Gallery({ openModal }) {
     return (
         <div className="gallery page">
             <span className="head">Gallery</span>
+
             <div className="tag-search">
                 {(showTagList && renderTagList[0]) &&
                     <div className="tag-list">
@@ -113,10 +154,25 @@ function Gallery({ openModal }) {
                     onClick={handleInputClick}
                     placeholder="Search by Tags"
                 />
+                <div className='tag-drop'>
+                    <button onClick={() => setOpenTagsModal(true)}>
+                        <i className='fa fa-tag'></i>
+                        <span>Tags</span>
+                    </button>
+                </div>
             </div>
-            <div className="tiles">
-                <Tiles openModal={openModal} data={renderData} taggedNow={taggedNow} />
-            </div>
+            {openTagsModal ?
+                <div className='tags'>
+                    <div className="tags-dis" onClick={() => setOpenTagsModal(false)}></div>
+                    <div className='tags-con'>
+                        <Tags />
+                    </div>
+                </div>
+                :
+                <div className="tiles">
+                    <Tiles openModal={openModal} data={renderData} taggedNow={taggedNow} />
+                </div>
+            }
         </div>
     )
 }
