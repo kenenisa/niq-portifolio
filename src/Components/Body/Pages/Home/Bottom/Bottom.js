@@ -90,6 +90,25 @@ function Bottom() {
             </div>
             <div className="latest">
                 <div className="head-item">Latest</div>
+                {/* <iframe>
+                    <script async src="https://telegram.org/js/telegram-widget.js?19" data-telegram-post="creativenetwork/67" data-width="100%"></script>
+                </iframe> */}
+                <h3>🔥New NFT Collections made by your one and only!
+                    <a href='https://www.binance.com/en/nft/profile/betetibebat-67624323b611af5e8d201e1ba7f6823c?category=created' target="_blank" rel="noreferrer">
+                        <i>Order Now</i>
+                    </a>
+                </h3>
+                <iframe
+                    id="telegram-post-creativenetwork-67"
+                    src="https://t.me/creativenetwork/67?embed=1"
+                    title="Telegram message"
+                    // width="100%"
+                    // height=""
+                    frameBorder="0"
+                    scrolling="no"
+                    // style="overflow: hidden; border: none; min-width: 320px; height: 453px;"
+                    __idm_id__="2981889"></iframe>
+                <h3>Winning the PAC Competition 🏆</h3>
                 <iframe
                     // width="853"
                     // height="350"
@@ -151,7 +170,7 @@ function Bottom() {
                             <div className="name">
                                 {review.name} <span>{review.type}</span>
                             </div>
-                            <div className="review-text">{review.text}</div>
+                            <div className="review-text" dangerouslySetInnerHTML={{__html:review.text}}></div>
                             <div className="review-stars">
                                 <Stars review={review.rate} /><span>{review.rate}</span>
                             </div>

@@ -298,6 +298,14 @@
 .home .visits span{
   font-weight: 400;
 }
+.home h3{
+  border-top:1px solid #aaa;
+  padding-top:1rem
+}
+.home h3 a {
+  margin-left:0.5rem;
+  white-space: nowrap;
+}
 @media screen and (max-width: 1000px) {
   .home .latest iframe {
     height: 360px;
