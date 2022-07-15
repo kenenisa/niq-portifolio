@@ -3,7 +3,7 @@ import request from '../../../../../Util/request';
 import './Post.css'
 
 
-function Post({ data, disableReactions, i, likeCount }) {
+function Post({ data, disableReactions, i, likeCount,id }) {
     const [like, setLike] = useState(false);
     const [share, setShare] = useState(false);
     const [openComment, setOpenComment] = useState(false);
@@ -67,7 +67,7 @@ function Post({ data, disableReactions, i, likeCount }) {
         setTimeout(() => {
             setShare(false);
         }, 5000);
-        window.navigator.clipboard.writeText(window.location.href + '&b=' + i)
+        window.navigator.clipboard.writeText(window.location.href + '?b=' + i)
     }
     const checkLike = () => {
         const likes = localStorage.likes;
@@ -102,7 +102,7 @@ function Post({ data, disableReactions, i, likeCount }) {
         <div className="post">
             {alert && <div className="alert">Comment added successfully!</div>}
             <div className="img-con">
-                <img src={'./img/gallery/' + (data.id) + '.jpg'} alt="post" />
+                <img src={window.location.origin + '/img/gallery/' + (data.id) + '.jpg'} alt="post" />
                 {disableReactions && (
                 <div className="quality">
                     <a href={`https://kenenisa.github.io/niq-high-quality/${data.id}.jpg`} target="_blank" rel="noreferrer">
@@ -169,7 +169,7 @@ function Post({ data, disableReactions, i, likeCount }) {
                                 item = item.trim()
                                 if (item !== '') {
                                     return (
-                                        <a key={key} href={`/?page=Gallery&tag=${encodeURIComponent(item)}`}>
+                                        <a key={key} href={`/gallery?tag=${encodeURIComponent(item)}`}>
                                             <span className="tag">#{item}</span>
                                         </a>
                                     )

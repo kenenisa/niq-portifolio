@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import './Modal.css'
 import Post from './../Pages/Blog/Post/Post';
+import { useParams } from 'react-router-dom';
+
 //
 function Modal() {
     const [value, setValue] = useState({});
+    const param = useParams();
+
     useEffect(() => {
-        const dir = window.location;
-        if (dir.search.includes("v")) {
-            const v = decodeURIComponent(dir.search.split('v=')[1].split('&')[0]);
-            console.log(v);
-            setValue(window.data.gallery.find(i => i.id === (Number(v) + 1)));
-        }
-    }, []);
+        const v = param.id
+        setValue(window.data.gallery.find(i => i.id === (Number(v) + 1)));
+    }, [param.id]);
     return (
         <div className="modal">
-            <Post data={value} disableReactions={true} />
+            <Post data={value} disableReactions={true} id={param.id}/>
         </div>
     )
 }

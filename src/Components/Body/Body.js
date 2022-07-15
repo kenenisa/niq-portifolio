@@ -7,32 +7,41 @@ import Blog from './Pages/Blog/Blog';
 import Modal from './Modal/Modal';
 import Projects from './Pages/Projects/Projects';
 import Socials from './Pages/Socials/Socials';
+import {
+    Routes,
+    Route,
+    useNavigate
+} from "react-router-dom";
 //
 function Body({ page }) {
+    const navigate = useNavigate();
     const openModal = (id) => {
-        window.location.assign('/?page=Modal&v=' + (id - 1))
+        navigate("/modal/" + (id - 1))
+        // window.location.assign('/?page=Modal&v=' + (id - 1))
     }
     const Router = () => {
-        if (page === 'Gallery') {
-            return <Gallery openModal={openModal} />
-        } else if (page === 'Blog') {
-            return <Blog />
-        } else if (page === 'Modal') {
-            return <Modal />
-        } else if (page === 'Projects') {
-            return <Projects />
-        } else if (page === 'Socials') {
-            return <Socials />
-        } else {
-            return <Home />
-        }
+        return (
+            <Routes>
+                <Route path="/gallery" element={<Gallery openModal={openModal} />}></Route>
+                <Route path="/blog" element={<Blog />}>
+                </Route>
+                <Route path="/modal/:id" element={<Modal />}>
+                </Route>
+                <Route path="/projects" element={<Projects />}>
+                </Route>
+                <Route path="/socials" element={<Socials />}>
+                </Route>
+                <Route path="/" element={<Home />}>
+                </Route>
+            </Routes>
+        );
     }
     return (
         <div className="body-con">
             <Polar />
             <Router />
             <div className="telet">
-                <img src="./img/web.png" alt="telet" />
+                <img src={window.location.origin + "/img/web.png"} alt="telet" />
             </div>
         </div>
     )

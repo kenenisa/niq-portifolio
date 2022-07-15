@@ -36,7 +36,7 @@ function Socials() {
                     <div className="media">
                         <img src="./img/uniq-insta.jpg" alt="uniq" />
                         <div className="brand-icon">
-                            <img src={'./img/instagram.png'} alt="instagram" />
+                            <img src={window.location.origin + '/img/instagram.png'} alt="instagram" />
                         </div>
                     </div>
                     <div className="text">
@@ -67,7 +67,7 @@ function Socials() {
                             <div className="media">
                                 <img src="./img/uniq.jpg" alt="uniq" />
                                 <div className="brand-icon">
-                                    <img src={'./img/telegram.png'} alt="telegram" />
+                                    <img src={window.location.origin + '/img/telegram.png'} alt="telegram" />
                                 </div>
                             </div>
                             <div className="text">

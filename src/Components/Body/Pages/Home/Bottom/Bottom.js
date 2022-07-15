@@ -98,7 +98,7 @@ function Bottom() {
                         <i>Order Now</i>
                     </a>
                 </h3>
-                <iframe
+                {/* <iframe
                     id="telegram-post-creativenetwork-67"
                     src="https://t.me/creativenetwork/67?embed=1"
                     title="Telegram message"
@@ -107,16 +107,16 @@ function Bottom() {
                     frameBorder="0"
                     scrolling="no"
                     // style="overflow: hidden; border: none; min-width: 320px; height: 453px;"
-                    __idm_id__="2981889"></iframe>
+                    __idm_id__="2981889"></iframe> */}
                 <h3>Winning the PAC Competition 🏆</h3>
-                <iframe
+                {/* <iframe
                     // width="853"
                     // height="350"
                     src="https://www.youtube.com/embed/_Azo_46RHDk"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen></iframe>
+                    allowFullScreen></iframe> */}
             </div>
 
             <div className="latest down">

@@ -19,7 +19,7 @@ function Projects() {
                     </div>
                     <div className="deception" style={{ animationDelay: ((key * 0.9) + 1) + 's' }}></div>
                     <div className="img">
-                        <img src={'./img/projects/' + item.id + '.jpg'} alt="project" />
+                        <img src={window.location.origin + '/img/projects/' + item.id + '.jpg'} alt="project" />
                     </div>
                 </div>
             ))}

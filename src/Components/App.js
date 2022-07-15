@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter } from 'react-router-dom'
 import './App.css';
 import Body from './Body/Body';
 import Header from './Header/Header';
@@ -19,14 +20,16 @@ function App() {
   }, []);
   return (
     // <Icon>add_circle</Icon>
-    <div className="app">
-      <span className="above">
-        <Header />
-      </span>
-      <span className="under">
-        <Body page={page} />
-      </span>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <span className="above">
+          <Header />
+        </span>
+        <span className="under">
+          <Body page={page} />
+        </span>
+      </div>
+    </BrowserRouter>
   );
 }
 
