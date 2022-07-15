@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './Header.css';
 //
 //
@@ -7,6 +7,7 @@ function Header({ page }) {
     const [hidden, setHidden] = useState(true);
     const [contact, setContact] = useState(false);
     const navigate = useNavigate();
+    const path = useLocation();
     window.onscroll = (e) => {
         if (window.scrollY > 200) {
             setHidden(false);
@@ -21,13 +22,13 @@ function Header({ page }) {
     return (
         <div className={`header ${hidden ? 'hide' : 'show'} ${window.location.href.includes('Modal') && 'shadow'}`}>
             <div className="left">
-                {window.location.search.includes('Modal') ?
+                {path.pathname.includes('modal') ?
                     <button className="menu" onClick={() => navigate(-1)}>
                         <i className="fa fa-arrow-left"></i>
                     </button>
                     :
                     <button className="menu" onClick={() => navigate("/")}>
-                        <img src={window.location.origin + "/img/logo.png"} alt="logo" />
+                        <img src={ "/img/logo.png"} alt="logo" />
                     </button>
                 }
             </div>
@@ -46,7 +47,7 @@ function Header({ page }) {
                             <div className="type">Call</div>
                             <div className="disc">+25101577447</div>
                             <div className="img">
-                                <img src={window.location.origin + "/img/call.jpg"} alt="call contact" />
+                                <img src={ "/img/call.jpg"} alt="call contact" />
                             </div>
                         </div>
                     </a>
@@ -55,7 +56,7 @@ function Header({ page }) {
                             <div className="type">Direct message</div>
                             <div className="disc">@Estifoniq</div>
                             <div className="img">
-                                <img src={window.location.origin + "/img/telegram.png"} alt="message contact" />
+                                <img src={ "/img/telegram.png"} alt="message contact" />
                             </div>
                         </div>
                     </a>

@@ -25,9 +25,9 @@ function Socials() {
 
     }, []);
 
-    useEffect(() => {
-        console.log(JSON.stringify(telegram));
-    }, [telegram])
+    // useEffect(() => {
+    //     console.log(JSON.stringify(telegram));
+    // }, [telegram])
     return (
         <div className="socials page">
             <div className="head">Social Media</div>
@@ -36,7 +36,7 @@ function Socials() {
                     <div className="media">
                         <img src="./img/uniq-insta.jpg" alt="uniq" />
                         <div className="brand-icon">
-                            <img src={window.location.origin + '/img/instagram.png'} alt="instagram" />
+                            <img src={ './img/instagram.png'} alt="instagram" />
                         </div>
                     </div>
                     <div className="text">
@@ -67,7 +67,7 @@ function Socials() {
                             <div className="media">
                                 <img src="./img/uniq.jpg" alt="uniq" />
                                 <div className="brand-icon">
-                                    <img src={window.location.origin + '/img/telegram.png'} alt="telegram" />
+                                    <img src={ './img/telegram.png'} alt="telegram" />
                                 </div>
                             </div>
                             <div className="text">

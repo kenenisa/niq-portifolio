@@ -9,7 +9,6 @@ function Tiles({ data, openModal, taggedNow }) {
         return true;
     }
     const [visible, setVisible] = useState(data.filter(hideItems).slice(0, 15));
-    // console.log(visible);
     useEffect(() => {
         setVisible(data.filter(hideItems).slice(0, 15))
         // eslint-disable-next-line
@@ -20,7 +19,6 @@ function Tiles({ data, openModal, taggedNow }) {
         }
     }
     useEffect(() => {
-        // console.log(visible.length + 1, visible.length + 16);
         window.addEventListener('scroll', seeMore, false)
         return () => {
             window.removeEventListener('scroll', seeMore, false)
@@ -34,7 +32,7 @@ function Tiles({ data, openModal, taggedNow }) {
             <React.Fragment>
                 {visible
                     .map((item, key) => {
-                        return <Tile img={window.location.origin + '/img/gallery/tumbnail/' + (item.id) + '.jpg'} title={item.title} i={item.id} ii={key % 15} key={key} openModal={openModal} />
+                        return <Tile img={ './img/gallery/tumbnail/' + (item.id) + '.jpg'} title={item.title} i={item.id} ii={key % 15} key={key} openModal={openModal} />
                     })}
             </React.Fragment>
         )

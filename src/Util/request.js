@@ -1,7 +1,7 @@
 const server = {
     url: 'https://polar-oasis-87155.herokuapp.com/'
 }
-// const server = window.location.href.includes('192') ? window.location.origin.split(':')[0] + ':5000' :(window.location.href.includes('localhost') ? 'http://localhost:5000/' : window.location.origin + '/')
+// const server = window.location.href.includes('192') ? window.location.origin.split(':')[0] + ':5000' :(window.location.href.includes('localhost') ? 'http://localhost:5000/' :  '/')
 
 const func = (to, post = false, body = null) => {
     if (post) {

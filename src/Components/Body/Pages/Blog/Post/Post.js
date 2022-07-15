@@ -12,7 +12,6 @@ function Post({ data, disableReactions, i, likeCount,id }) {
     const [text, setText] = useState('');
     const [email, setEmail] = useState(null);
     const [alert, setAlert] = useState(false);
-    console.log({ dataId: data.id });
     const handleLike = () => {
         setLike(!like);
         let likes = JSON.parse(localStorage.likes || null) || [];
@@ -102,7 +101,7 @@ function Post({ data, disableReactions, i, likeCount,id }) {
         <div className="post">
             {alert && <div className="alert">Comment added successfully!</div>}
             <div className="img-con">
-                <img src={window.location.origin + '/img/gallery/' + (data.id) + '.jpg'} alt="post" />
+                <img src={ './img/gallery/' + (data.id) + '.jpg'} alt="post" />
                 {disableReactions && (
                 <div className="quality">
                     <a href={`https://kenenisa.github.io/niq-high-quality/${data.id}.jpg`} target="_blank" rel="noreferrer">

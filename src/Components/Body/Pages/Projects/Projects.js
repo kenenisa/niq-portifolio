@@ -4,7 +4,6 @@ import './Projects.css'
 function Projects() {
     const data = window.data.projects;
     const RenderProject = () => {
-        console.log('called');
         return (<Fragment>
             {data.map((item, key) => (
                 <div className={`project ${key % 2 === 0 ? 'even' : 'odd'}`} key={key} >
@@ -19,7 +18,7 @@ function Projects() {
                     </div>
                     <div className="deception" style={{ animationDelay: ((key * 0.9) + 1) + 's' }}></div>
                     <div className="img">
-                        <img src={window.location.origin + '/img/projects/' + item.id + '.jpg'} alt="project" />
+                        <img src={ './img/projects/' + item.id + '.jpg'} alt="project" />
                     </div>
                 </div>
             ))}

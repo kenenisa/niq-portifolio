@@ -25,7 +25,6 @@ function Bottom() {
         })
     }, [])
     useEffect(() => {
-        // console.log(visible.length + 1, visible.length + 16);
         window.addEventListener('scroll', seeMore, false)
         return () => {
             window.removeEventListener('scroll', seeMore, false)

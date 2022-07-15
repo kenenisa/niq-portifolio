@@ -16,7 +16,7 @@ import {
 function Body({ page }) {
     const navigate = useNavigate();
     const openModal = (id) => {
-        navigate("/modal/" + (id - 1))
+        navigate("/modal?v=" + (id - 1))
         // window.location.assign('/?page=Modal&v=' + (id - 1))
     }
     const Router = () => {
@@ -25,7 +25,7 @@ function Body({ page }) {
                 <Route path="/gallery" element={<Gallery openModal={openModal} />}></Route>
                 <Route path="/blog" element={<Blog />}>
                 </Route>
-                <Route path="/modal/:id" element={<Modal />}>
+                <Route path="/modal" element={<Modal />}>
                 </Route>
                 <Route path="/projects" element={<Projects />}>
                 </Route>
@@ -41,7 +41,7 @@ function Body({ page }) {
             <Polar />
             <Router />
             <div className="telet">
-                <img src={window.location.origin + "/img/web.png"} alt="telet" />
+                <img src={ "/img/web.png"} alt="telet" />
             </div>
         </div>
     )
