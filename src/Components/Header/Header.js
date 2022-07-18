@@ -16,8 +16,9 @@ function Header({ page }) {
         }
     }
     const handleRedirect = (e) => {
-        navigate(e.target.innerHTML.toString().toLowerCase())
-        // window.location.assign('/?page=' + e.target.innerHTML)
+        if (!window.location.origin.includes("estifanosasmamaw")) {
+            navigate(e.target.innerHTML.toString().toLowerCase())
+        }
     }
     return (
         <div className={`header ${hidden ? 'hide' : 'show'} ${window.location.href.includes('Modal') && 'shadow'}`}>
@@ -28,16 +29,24 @@ function Header({ page }) {
                     </button>
                     :
                     <button className="menu" onClick={() => navigate("/")}>
-                        <img src={ "/img/logo.png"} alt="logo" />
+                        <img src={"/img/logo.png"} alt="logo" />
                     </button>
                 }
             </div>
             <div className="right">
                 <span>
-                    <button onClick={handleRedirect}>Gallery</button>
-                    <button onClick={handleRedirect}>Blog</button>
-                    <button onClick={handleRedirect}>Projects</button>
-                    <button onClick={handleRedirect}>Socials</button>
+                    <a href="/gallery">
+                        <button onClick={handleRedirect}>Gallery</button>
+                    </a>
+                    <a href="/blog">
+                        <button onClick={handleRedirect}>Blog</button>
+                    </a>
+                    <a href="/projects">
+                        <button onClick={handleRedirect}>Projects</button>
+                    </a>
+                    <a href="/socials">
+                        <button onClick={handleRedirect}>Socials</button>
+                    </a>
                 </span>
                 <button onClick={() => setContact(!contact)} className="contact-btn">Contact</button>
                 <div className={`contact-bg ${contact && 'show-bg'}`} onClick={() => setContact(false)}></div>
@@ -47,7 +56,7 @@ function Header({ page }) {
                             <div className="type">Call</div>
                             <div className="disc">+25101577447</div>
                             <div className="img">
-                                <img src={ "/img/call.jpg"} alt="call contact" />
+                                <img src={"/img/call.jpg"} alt="call contact" />
                             </div>
                         </div>
                     </a>
@@ -56,7 +65,7 @@ function Header({ page }) {
                             <div className="type">Direct message</div>
                             <div className="disc">@Estifoniq</div>
                             <div className="img">
-                                <img src={ "/img/telegram.png"} alt="message contact" />
+                                <img src={"/img/telegram.png"} alt="message contact" />
                             </div>
                         </div>
                     </a>
