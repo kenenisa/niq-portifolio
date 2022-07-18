@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://estifanosasmamaw.ml</loc>
-        <lastmod>2022-07-13</lastmod>
+        <lastmod>2022-07-18</lastmod>
         <priority>1</priority>
         <changefreq>weekly</changefreq>
-        <image:image>
+        <!-- <image:image>
             <image:loc>https://estifanosasmamaw.ml/img/gallery/1.jpg</image:loc>
         </image:image>
         <image:image>
@@ -120,29 +120,29 @@
         </image:image>
         <image:image>
             <image:loc>https://estifanosasmamaw.ml/img/gallery/35.jpg</image:loc>
-        </image:image>
+        </image:image> -->
     </url>
     <url>
-        <loc>https://estifanosasmamaw.ml/?page=Gallery</loc>
-        <lastmod>2022-07-13</lastmod>
+        <loc>https://estifanosasmamaw.ml/gallery</loc>
+        <lastmod>2022-07-18</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://estifanosasmamaw.ml/?page=Blog</loc>
-        <lastmod>2022-07-13</lastmod>
+        <loc>https://estifanosasmamaw.ml/blog</loc>
+        <lastmod>2022-07-18</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://estifanosasmamaw.ml/?page=Projects</loc>
-        <lastmod>2022-07-13</lastmod>
+        <loc>https://estifanosasmamaw.ml/projects</loc>
+        <lastmod>2022-07-18</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
     </url>
     <url>
-        <loc>https://estifanosasmamaw.ml/?page=Socials</loc>
-        <lastmod>2022-07-13</lastmod>
+        <loc>https://estifanosasmamaw.ml/socials</loc>
+        <lastmod>2022-07-18</lastmod>
         <priority>0.5</priority>
         <changefreq>weekly</changefreq>
     </url>
