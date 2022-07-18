@@ -34,9 +34,9 @@ function Socials() {
             {instagram &&
                 <div className="con">
                     <div className="media">
-                        <img src="./img/uniq-insta.jpg" alt="uniq" />
+                        <img src="https://estifanosasmamaw.ml/img/uniq-insta.jpg" alt="uniq" />
                         <div className="brand-icon">
-                            <img src={ './img/instagram.png'} alt="instagram" />
+                            <img src={ 'https://estifanosasmamaw.ml/img/instagram.png'} alt="instagram" />
                         </div>
                     </div>
                     <div className="text">
@@ -65,9 +65,9 @@ function Socials() {
                     telegram ?
                         <div className="con">
                             <div className="media">
-                                <img src="./img/uniq.jpg" alt="uniq" />
+                                <img src="https://estifanosasmamaw.ml/img/uniq.jpg" alt="uniq" />
                                 <div className="brand-icon">
-                                    <img src={ './img/telegram.png'} alt="telegram" />
+                                    <img src={ 'https://estifanosasmamaw.ml/img/telegram.png'} alt="telegram" />
                                 </div>
                             </div>
                             <div className="text">
