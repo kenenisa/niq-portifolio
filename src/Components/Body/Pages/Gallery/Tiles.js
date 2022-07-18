@@ -32,7 +32,7 @@ function Tiles({ data, openModal, taggedNow }) {
             <React.Fragment>
                 {visible
                     .map((item, key) => {
-                        return <Tile img={window.location.origin + '/img/gallery/tumbnail/' + (item.id) + '.jpg'} title={item.title} i={item.id} ii={key % 15} key={key} openModal={openModal} />
+                        return <Tile img={'https://estifanosasmamaw.ml/img/gallery/tumbnail/' + (item.id) + '.jpg'} title={item.title} i={item.id} ii={key % 15} key={key} openModal={openModal} />
                     })}
             </React.Fragment>
         )
