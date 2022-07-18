@@ -61,7 +61,7 @@ function Polar() {
                                         context.useProgram(material.program),
                                         material.attachUniforms(void 0, _miniGl.commonUniforms),
                                         material.attachUniforms(void 0, material.uniforms)
-                                    }ፍ
+                                    }
                                 }
                                 //t = uniform
                                 attachUniforms(name, uniforms) {
