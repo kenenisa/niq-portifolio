@@ -91,7 +91,7 @@ function Polar() {
                                     }[this.type] || "1f", this.update()
                                 }
                                 update(value) {
-                                    void 0 !== this.value && context[`uniform${this.typeFn}`](value, 0 === this.typeFn.indexOf("Matrix") ? this.transpose : this.value, 0 === this.typeFn.indexOf("Matrix") ? this.value : null)
+                                    void 0 !== this.value && context && context[`uniform${this.typeFn}`](value, 0 === this.typeFn.indexOf("Matrix") ? this.transpose : this.value, 0 === this.typeFn.indexOf("Matrix") ? this.value : null)
                                 }
                                 //e - name
                                 //t - type
