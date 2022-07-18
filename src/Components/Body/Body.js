@@ -36,12 +36,16 @@ function Body({ page }) {
             </Routes>
         );
     }
+    const PassAStaticRenderer = () => {
+        const url = window.location.origin
+        return url.includes("estifanosasmamaw") || url.includes("3000")
+    }
     return (
         <div className="body-con">
-            <Polar />
+            {PassAStaticRenderer() && <Polar />}
             <Router />
             <div className="telet">
-                <img src={ "/img/web.png"} alt="telet" />
+                <img src={"/img/web.png"} alt="telet" />
             </div>
         </div>
     )
