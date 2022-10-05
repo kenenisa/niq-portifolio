@@ -137,7 +137,7 @@ function Gallery({ openModal }) {
         setTaggedNow(false);
     }
     return (
-        <div className="gallery page">
+        <div className="gallery page" id="gallery">
             <span className="head">Gallery</span>
 
             <div className="tag-search">

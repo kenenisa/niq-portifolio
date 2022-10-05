@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Tile from './Tile/Tile';
+import { BottomScrollListener } from 'react-bottom-scroll-listener';
 
 function Tiles({ data, openModal, taggedNow }) {
     const hideItems = (item) => {
@@ -13,8 +14,11 @@ function Tiles({ data, openModal, taggedNow }) {
         setVisible(data.filter(hideItems).slice(0, 15))
         // eslint-disable-next-line
     }, [data, taggedNow]);
+
+    const scrollAble = document.getElementById("gallery")
     const seeMore = () => {
-        if (window.innerHeight - window.scrollY < 300) {
+
+        if (scrollAble.scrollHeight - (window.scrollY + window.innerHeight) < 300) {
             setVisible(visible.concat(data.slice(visible.length + 1, visible.length + 16)))
         }
     }
@@ -24,12 +28,14 @@ function Tiles({ data, openModal, taggedNow }) {
             window.removeEventListener('scroll', seeMore, false)
         }
         // eslint-disable-next-line
-    }, [visible]);
+    }, [visible, scrollAble]);
 
     if (data.length) {
 
         return (
             <React.Fragment>
+                <BottomScrollListener onBottom={console.log} />
+
                 {visible
                     .map((item, key) => {
                         return <Tile img={'https://estifanosasmamaw.ml/img/gallery/tumbnail/' + (item.id) + '.jpg'} title={item.title} i={item.id} ii={key % 15} key={key} openModal={openModal} />

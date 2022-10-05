@@ -1,5 +1,23 @@
 var data = {
     gallery: [
+        {
+            id: 38,
+            title: "ጨረቃ",
+            body: "its been a while sice i worked on typography so i was trying out new amharic fonts and thats how i found this amazing piece called ጨረቃ , and who knows this might end up being a font so if we ever decied to make it happen ill sure share the process so stay tuned and i have made two versions of it in case it looked better in the other one.",
+            tag: "ethiopia, fantasy, photoshop, ጨረቃ, night, black, typography, font "
+        },
+        {
+            id: 37,
+            title: "ጨረቃ in Black",
+            body: "its been a while sice i worked on typography so i was trying out new amharic fonts and thats how i found this amazing piece called ጨረቃ , and who knows this might end up being a font so if we ever decied to make it happen ill sure share the process so stay tuned.",
+            tag: "ethiopia, fantasy, photoshop, ጨረቃ, night, black, moody, typography, font"
+        },
+        {
+            id: 36,
+            title: "kelቅል NFT",
+            body: "kelቅል is one of our very own first NFT collection and it is based on the first kelቅል segment which show the mix up of our ethiopians traditional and other cultures.",
+            tag: "ethiopia, fantasy, photoshop, Habeshan, NFT, traditional, kelቅል, design, cultural "
+        },
 
         {
             id: 35,

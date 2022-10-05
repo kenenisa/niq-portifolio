@@ -55,14 +55,15 @@
   font-weight: 200;
   cursor: pointer;
   padding: 0.7rem 1rem;
+  /* font-family:  sans-serif; */
 }
 .header .right button:hover {
   background-color: rgba(221, 221, 221, 0.137);
 }
 .header .right span button {
-  font-family: Calibri Light;
+  /* font-family: Calibri Light; */
   font-size: 1.2rem;
-  font-weight: 100;
+  font-weight: 400;
   margin-left: 0.5rem;
 }
 .header .contact-dialog {
