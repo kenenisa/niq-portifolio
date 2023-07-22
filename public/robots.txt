@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
-Sitemap: https://estifanosasmamaw.ml/sitemap.xml
+Sitemap: https://kenenisa.github.io/niq-portifolio/sitemap.xml

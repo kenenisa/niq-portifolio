@@ -101,7 +101,7 @@ function Post({ data, disableReactions, i, likeCount,id }) {
         <div className="post">
             {alert && <div className="alert">Comment added successfully!</div>}
             <div className="img-con">
-                <img src={ 'https://estifanosasmamaw.ml/img/gallery/' + (data.id) + '.jpg'} alt="post" />
+                <img src={ 'https://kenenisa.github.io/niq-portifolio/img/gallery/' + (data.id) + '.jpg'} alt="post" />
                 {disableReactions && (
                 <div className="quality">
                     <a href={`https://kenenisa.github.io/niq-high-quality/${data.id}.jpg`} target="_blank" rel="noreferrer">

@@ -18,7 +18,7 @@ function Projects() {
                     </div>
                     <div className="deception" style={{ animationDelay: ((key * 0.9) + 1) + 's' }}></div>
                     <div className="img">
-                        <img src={ 'https://estifanosasmamaw.ml/img/projects/' + item.id + '.jpg'} alt="project" />
+                        <img src={ 'https://kenenisa.github.io/niq-portifolio/img/projects/' + item.id + '.jpg'} alt="project" />
                     </div>
                 </div>
             ))}
