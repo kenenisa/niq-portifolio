@@ -17,6 +17,9 @@ jobs:
       - name: Checkout ⭐
         uses: actions/checkout@v1
 
+      - name: Config
+        run: export NODE_OPTIONS=--openssl-legacy-provider
+
       - name: Install and build ⚒
         run: npm cache clear --force && npm install && npm run build
       
